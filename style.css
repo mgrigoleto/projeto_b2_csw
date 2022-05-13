@@ -1,0 +1,298 @@
+body{
+  margin:0;
+  background-color:#DC143C;
+  color:white;
+  font-family:verdana;
+}
+
+/* MENU */
+ul{
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:0;
+  background-color:white;
+  margin:0;
+  border-bottom: 3px solid black;
+}
+li{
+  padding:0;
+  display:inline;
+}
+li a{
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:20px;
+  padding-right:20px;
+  background-color:white;
+  margin:0;
+  list-style:none;
+  text-decoration:none;
+  color: #DC143C;
+  transition: 0.2s;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 3px solid black;
+}
+li a:hover{
+  color: white;
+  background-color:#DC143C;
+}
+li#esq{
+  float:right;
+  transition: 0.2s;
+}
+.dica{
+  display: none;
+  font-family:verdana;
+  color: black;
+  background-color: white;
+  text-align: center;
+  border-radius: 8px;
+  width: 130px;
+  padding:5px;
+  font-size:20px;
+  margin-top:17px;
+  margin-left:5px;
+  position:absolute;
+  z-index:1;
+}
+
+li#esq a:hover + .dica{
+  display:block;
+}
+
+/* TEXTOS */
+h1{
+  font-size:40px;
+  text-align:center;
+  margin-top:20px;
+}
+p{
+  font-size:20px;
+  margin-bottom:5px;
+  text-size-adjust: auto;
+}
+
+/* BOTÕES */
+button{
+  border-radius: 8px;
+  font-size:16px;
+  margin-top:25px;
+  margin-bottom:25px;
+  margin-left:15px;
+  margin-right:15px;
+  height:45px;
+  width:120px;
+  font-family:verdana;
+  color:black;
+  background-color:#ffadad;
+  border: solid 2px #DC143C;
+  transition: 0.2s;
+  box-shadow: inset 1px 1px 8px #ffadad, 1px 1px 8px #ffadad;
+}
+button:hover{
+  color:#ffadad;
+  background-color:#DC143C;
+  border: solid 2px #ffadad;
+  box-shadow: inset 1px 1px 8px #ffadad, 1px 1px 8px #ffadad;
+}
+
+/* INPUTS */
+#fiS, #fiN, #menS, #menN{
+  width:20px;
+  height:20px;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+input#cpf{
+  width:18vw;
+}
+input#qtd{
+  width:10vw;
+}
+.l1{
+  width:22vw;
+}
+input#dtnasc{
+  width:14vw;
+  font-family:verdana;
+  font-size:15px;
+}
+input{
+  border: none;
+  height: 35px;
+  width:30vw;
+  border-radius:8px;
+  background-color:white;
+  font-size:15px;
+  padding-left:7px;
+  padding-right:7px;
+  
+}
+input:focus{
+   background-color:#ffc2c2;
+}
+select{
+  border: none;
+  height: 35px;
+  width:10vw;
+  border-radius:8px;
+  background-color:white;
+  font-family:verdana;
+  font-size:15px;
+}
+textarea{
+  font-family:verdana;
+  border: 1px solid #DC143C;
+  min-height: 75px;
+  width:100%;
+  border-radius:8px;
+  background-color: #ffc2c2;
+  color: #DC143C;
+}
+label{
+  font-size:18px;
+}
+
+
+/* DIVs */
+div#EE{
+  width:25%;
+  background-color:#DC143C;
+  position:fixed;
+  height:100vh;
+}
+div#ED{
+  width:25%;
+  background-color:#DC143C;
+  position:fixed;
+  right:0;
+  height:100vh;
+}
+div#M{
+  width:50%;
+  background-color:	#DC143C;
+  position:relative;
+  left:25%;
+  min-height:100vh;
+}
+.linha{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 15px;
+  margin-bottom:5px;
+}
+.opt{
+  padding-top:8px;
+}
+div#menor p{
+  margin-left:7px;
+}
+
+/* RESIZE DA PARTE DE INSERIR DADOS */
+@media screen and (max-width: 1100px){
+  div#EE, div#ED{
+    width:21%;
+  }
+  div#M{
+    width:58%;
+    left:21%
+  }
+  input#cpf{
+  width:20vw;
+  }
+  .l1{
+  width:26vw;
+  }
+  input#dtnasc{
+  width:14vw;
+  }
+  select{
+  width:12vw;
+  }
+}
+@media screen and (max-width: 850px){
+  div#EE, div#ED{
+    width:18%;
+  }
+  div#M{
+    width:64%;
+    left:18%;
+  }
+  .l1{
+  width:26vw;
+  }
+  input#dtnasc{
+  width:18vw;
+  }
+}
+@media screen and (max-width: 725px){
+  div#EE, div#ED{
+    width:14%;
+  }
+  div#M{
+    width:72%;
+    left:14%;
+  }
+  .l1{
+  width:30vw;
+  }
+  input#dtnasc{
+  width:22vw;
+  }
+}
+@media screen and (max-width: 600px){
+  div#EE, div#ED{
+    width:5%;
+  }
+  div#M{
+    width:90%;
+    left:5%;
+  }
+  input#cpf{
+  width:26vw;
+  }
+  .l1{
+  width:34vw;
+  }
+  input#dtnasc{
+  width:26vw;
+  }
+  select{
+  width:16vw;
+  }
+  p, label{
+    font-size:16px;
+  }
+}
+
+/* RESIZE MENU */
+@media screen and (max-width: 320px){
+  li a{
+    font-size: 18px;
+  }
+  p{
+    font-size:12px;
+  }
+  .dica{
+    width:110px;
+    font-size:16px;
+  }
+}
+@media screen and (max-width: 260px){
+  li a{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 220px){
+  li a{
+    font-size: 8px;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  ul{
+  margin:0;
+  padding-top:10px;
+  padding-bottom:10px;
+  }  
+}
