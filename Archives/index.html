@@ -12,17 +12,24 @@
 <body>
   
   <div id="menu">
-    <ul>
-      <li><a href="#"><i class="fa-solid fa-house-chimney"></i> HOME</a></li>
-        <li id="esq"><a href="#">
-          <i class="fa-solid fa-circle-info"></i> AJUDA</a><span class="dica">Os campos marcados com (*) são obrigatórios.</span></li>
-    </ul>
+    <div class="menuItem">
+      <a href="#"><i class="fa-solid fa-house-chimney"></i> HOME</a>
+    </div>
+
+    <div class="menuItem" id="itemEsq">    
+<a href="#"><i class="fa-solid fa-circle-info"></i> AJUDA</a><span class="dica">Os campos marcados com (*) são obrigatórios.</span>
+    </div>
+
   </div>
   <div id="EE"></div>
   <div id="ED"></div>
   <div id="M">
+
+    <div id="siteFlow">
+      <strong><i><a href="#">Home</a> > Cadastro</i></strong>
+    </div>
   
-    <h1>CADASTRO</h1>
+    <h2>Informações pessoais</h2>
     
     <div class="linha" style="margin-top:-15px;">
       
@@ -82,6 +89,16 @@
       </div>
       </div>
     </div> 
+
+    <div class="txtArea">
+      <div>
+        <p id="desc">*Mais informações <i id="info" class="fa-solid fa-circle-question"></i><span class="infoTA">Conte um pouco sobre você e sua família. Esse texto aparecerá no seu perfil para que outras pessoas vejam.</span></p>   
+      </div>
+      <div>
+        <textarea id="moreInfo"></textarea>
+      </div>
+     
+    </div>
 
 
 
