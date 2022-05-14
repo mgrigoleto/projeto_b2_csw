@@ -1,24 +1,27 @@
 body{
   margin:0;
+  padding-bottom:200px;
   background-color:#DC143C;
   color:white;
   font-family:verdana;
 }
 
 /* MENU */
-ul{
+div#menu{
+  display:flex;
   padding-top:20px;
   padding-bottom:20px;
   padding-left:0;
   background-color:white;
   margin:0;
   border-bottom: 3px solid black;
+  justify-content:space-between;
 }
-li{
+div#menuItem{
   padding:0;
   display:inline;
 }
-li a{
+div.menuItem a{
   padding-top:20px;
   padding-bottom:20px;
   padding-left:20px;
@@ -33,13 +36,9 @@ li a{
   font-weight: bold;
   border-bottom: 3px solid black;
 }
-li a:hover{
+div.menuItem a:hover{
   color: white;
   background-color:#DC143C;
-}
-li#esq{
-  float:right;
-  transition: 0.2s;
 }
 .dica{
   display: none;
@@ -56,9 +55,22 @@ li#esq{
   position:absolute;
   z-index:1;
 }
-
-li#esq a:hover + .dica{
+div#itemEsq a:hover + .dica{
   display:block;
+}
+
+
+/* User Flow */
+div#siteFlow{
+  margin-top:20px;
+  margin-bottom:10px;
+}
+div#siteFlow a{
+  color:white;
+  transition:0.2s;
+}
+div#siteFlow a:hover{
+  color:#fdff85;
 }
 
 /* TEXTOS */
@@ -66,6 +78,12 @@ h1{
   font-size:40px;
   text-align:center;
   margin-top:20px;
+}
+h2{
+  font-size:30px;
+  padding-bottom:5px;
+  padding-top:20px;
+  text-align:center;
 }
 p{
   font-size:20px;
@@ -142,16 +160,37 @@ select{
   font-size:15px;
 }
 textarea{
+  margin: 0; 
+  padding: 0; 
+  border-width: 0;
   font-family:verdana;
-  border: 1px solid #DC143C;
-  min-height: 75px;
+  min-height: 150px;
+  font-size:15px;
   width:100%;
   border-radius:8px;
-  background-color: #ffc2c2;
-  color: #DC143C;
+  background-color: white;
+  color: black;
 }
 label{
   font-size:18px;
+}
+.infoTA{
+  border: 1px solid black;
+  visibility:hidden;
+  font-family:verdana;
+  color: black;
+  background-color: white;
+  text-align: left;
+  border-radius: 8px;
+  width: 45%;
+  padding:5px;
+  font-size:14px;
+  margin-left:5px;
+  position:absolute;
+  z-index:1;
+}
+p i#info:hover + .infoTA{
+  visibility:visible;
 }
 
 
@@ -181,6 +220,10 @@ div#M{
   justify-content:space-between;
   margin-top: 15px;
   margin-bottom:5px;
+}
+.txtArea{
+  display:block;
+  padding-top: 10px;
 }
 .opt{
   padding-top:8px;
@@ -268,7 +311,7 @@ div#menor p{
 
 /* RESIZE MENU */
 @media screen and (max-width: 320px){
-  li a{
+  div.menuItem a{
     font-size: 18px;
   }
   p{
@@ -280,17 +323,17 @@ div#menor p{
   }
 }
 @media screen and (max-width: 260px){
-  li a{
+  div.menuItem a{
     font-size: 14px;
   }
 }
 @media screen and (max-width: 220px){
-  li a{
+  div.menuItem a{
     font-size: 8px;
     padding-top:10px;
     padding-bottom:10px;
   }
-  ul{
+  div#menu{
   margin:0;
   padding-top:10px;
   padding-bottom:10px;
