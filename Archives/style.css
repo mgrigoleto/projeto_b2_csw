@@ -95,6 +95,7 @@ p{
 div#botões{
   display:flex;
   justify-content:center;
+  padding-top:20px;
 }
 button{
   font-weight:bold;
@@ -102,8 +103,8 @@ button{
   font-size:15px;
   margin-top:25px;
   margin-bottom:25px;
-  margin-left:15px;
-  margin-right:15px;
+  margin-left:10px;
+  margin-right:10px;
   height:45px;
   width:120px;
   font-family:verdana;
@@ -143,16 +144,17 @@ button#limpar:hover{
   margin-top: -1px;
   vertical-align: middle;
 }
-input#cpf{
+input#cpf,#cidade,#CEP,#bairro,#compl{
   width:18vw;
 }
-input#qtd{
-  width:10vw;
+input#qtd,#numC{
+  width:6vw;
 }
 .l1{
   width:22vw;
 }
 input#dtnasc{
+  height:37px;
   width:14vw;
   font-family:verdana;
   font-size:15px;
@@ -173,17 +175,19 @@ input:focus{
 }
 select{
   border: none;
-  height: 35px;
+  height: 37px;
   width:10vw;
   border-radius:8px;
   background-color:white;
   font-family:verdana;
   font-size:15px;
 }
+select#uf{
+  height:37px;
+  width:8vw;
+}
 textarea{
-  margin: 0; 
-  padding: 0; 
-  border-width: 0;
+  padding: 7px; 
   font-family:verdana;
   min-height: 150px;
   font-size:15px;
@@ -212,6 +216,13 @@ label{
 }
 p i#info:hover + .infoTA{
   visibility:visible;
+}
+div#logrDiv,input#logr{
+  width:100%;
+  margin-right:14px;
+}
+input#logr{
+  width:100%;
 }
 
 
@@ -245,12 +256,19 @@ div#M{
 .txtArea{
   display:block;
   padding-top: 10px;
+  margin-right:14px;
 }
 .opt{
   padding-top:8px;
 }
 div#menor p{
   margin-left:7px;
+}
+div#linhaFilhos{
+  justify-content: start;
+}
+div.ctdLF{
+  padding-right:35px; 
 }
 
 /* RESIZE DA PARTE DE INSERIR DADOS */
@@ -262,7 +280,7 @@ div#menor p{
     width:58%;
     left:21%
   }
-  input#cpf{
+  input#cpf,#cidade,#CEP,#bairro,#compl{
   width:20vw;
   }
   .l1{
@@ -313,7 +331,7 @@ div#menor p{
     width:90%;
     left:5%;
   }
-  input#cpf{
+  input#cpf,#cidade,#CEP,#bairro,#compl{
   width:26vw;
   }
   .l1{
@@ -332,6 +350,12 @@ div#menor p{
     width:110px;
     font-size:16px;
   }
+  select#uf{
+    width:12vw;
+  }
+  input#qtd,#numC{
+  width:10vw;
+}
 }
 
 /* RESIZE MENU */
