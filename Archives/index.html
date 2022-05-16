@@ -34,26 +34,26 @@
     <div class="linha" style="margin-top:-15px;">
       
       <div>
-      <p id="nome">*Nome:</p>
+      <p id="nomeP">*Nome</p>
       <input type="text" id="nome" class="l1" required placeholder="Ex.: Ana">
       </div>
       <div>
-      <p id="sobrenome">*Sobrenome:</p>
+      <p id="sobrenome">*Sobrenome</p>
       <input type="text" id="sobrenome" class="l1" required placeholder="Ex.: Soares">
       </div>
     </div>  
 
     <div class="linha">
       <div>  
-      <p id="cpf">*CPF:</p>
+      <p id="cpfP">*CPF</p>
       <input type="text" id="cpf" required>
       </div>
       <div>
-      <p id="dtnasc">*Nascimento:</p>
+      <p id="dtnascP">*Nascimento</p>
       <input type="date" id="dtnasc" required>
       </div>
       <div>
-      <p id="sexo">*Sexo:</p>
+      <p id="sexoP">*Sexo</p>
       <select id="sexo" name="sexo">
         <option value="" disabled selected hidden>Escolha</option>
         <option value="fem">Feminino</option>
@@ -63,8 +63,8 @@
       </div>
     </div>
 
-    <div class="linha">
-      <div>
+    <div class="linha" id="linhaFilhos">
+      <div class="ctdLF">
         <p id="pergFilhos">*Possui filhos?</p>
       <div class="opt">
         <input type="radio" id="fiS" name="filhos" value="sim" onclick="showFilhos()">
@@ -74,20 +74,11 @@
       </div>
       </div>
         
-      <div id="qtd" style="display:none;">
-        <p id="qtd">Quantos?</p>
-        <input type="number" id="qtd" nome="qtd">
+      <div id="qtdDiv" style="display:none;" class="ctdLF">
+        <p id="qtdP">Quantos?</p>
+        <input type="number" min="1" id="qtd" nome="qtd" value="1">
       </div>
 
-      <div id="menor" style="display:none;">
-        <p id="pergMenor">Algum menor?</p>
-      <div class="opt">
-        <input type="radio" id="menS" name="menor" value="sim">
-        <label for="menS">Sim</label>
-        <input type="radio" id="menN" name="menor" value="nao">
-        <label for="menN">Não</label>
-      </div>
-      </div>
     </div> 
 
     <div class="txtArea">
@@ -98,6 +89,49 @@
         <textarea id="moreInfo"></textarea>
       </div>
      
+    </div>
+
+    <h2>Sobre seu lar</h2>
+
+    <div class="linha" style="margin-top:-15px;">
+      <div>
+        <p id="cep">*CEP</p>
+        <input type="text" id="CEP" name="CEP" required>
+      </div>
+      <div>
+        <p id="cidadeP">*Cidade</p>
+        <input type="text" id="cidade" name="cidade" required>
+      </div>
+      <div>
+        <p id="ufP">*UF</p>
+        <select id="uf" name="uf">
+          <option value="ex1">Ex 1</option>
+          <option value="ex2">Ex 2</option>
+          <option value="exN">Ex n</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="linha">
+      <div id="logrDiv">
+        <p id="logrP">*Logradouro</p>
+        <input type="text" id="logr" name="logradouro">
+      </div>
+    </div>
+
+    <div class="linha">
+      <div>
+        <p id="bairroP">*Bairro</p>
+        <input type="text" id="bairro" name="bairro">
+      </div>
+      <div>
+        <p id="numCasa">*Número</p>
+        <input type="number" min="0" id="numC" name="numeroCasa">
+      </div>
+      <div>
+        <p id="complP">Complemento</p>
+        <input type="text" id="compl" name="complemento">
+      </div>
     </div>
 
 
