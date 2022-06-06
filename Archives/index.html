@@ -17,7 +17,7 @@
     </div>
 
     <div class="menuItem" id="itemEsq">    
-<a href="#"><i class="fa-solid fa-circle-info"></i> AJUDA</a><span class="dica">Os campos marcados com (*) são obrigatórios.</span>
+<a href="#"><i class="fa-solid fa-circle-info"></i> AJUDA</a><span class="dica">Para salvar seus dados, todos os campos marcados com (*) devem ser preenchidos.</span>
     </div>
 
   </div>
@@ -38,7 +38,7 @@
       <input type="text" id="nome" class="l1" required placeholder="Ex.: Ana">
       </div>
       <div>
-      <p id="sobrenome">*Sobrenome</p>
+      <p id="sobrenomeP">*Sobrenome</p>
       <input type="text" id="sobrenome" class="l1" required placeholder="Ex.: Soares">
       </div>
     </div>  
@@ -91,12 +91,12 @@
      
     </div>
 
-    <h2>Sobre seu lar</h2>
+    <h2>Endereço</h2>
 
     <div class="linha" style="margin-top:-15px;">
       <div>
         <p id="cep">*CEP</p>
-        <input type="text" id="CEP" name="CEP" required>
+        <input type="text" id="cepID" name="CEP" required>
       </div>
       <div>
         <p id="cidadeP">*Cidade</p>
@@ -135,12 +135,24 @@
     </div>
 
 
-
-  <div id="botões">
-    <button id="limpar" onclick="limpar()">Limpar</button>
-    <button id="cancel" onclick="cancel()()">Cancelar</button>
-    <button id="save" onclick="save()">Salvar</button>
+  <div id="allBtns">
+  <div class="botões">
+    <div>
+      <button id="cancel" onclick="cancel()()">Cancelar</button>
+    </div>
+    <div id="btnEdit" style="display:none;">
+      <button id="edit" onclick="edit()">Editar</button>
+    </div>
   </div>
+    
+  <div class="botões">
+    <div>
+      <button id="save" onclick="save()">Salvar</button>
+    </div>
+  </div>
+  </div>
+
+    <h3 id="msgSave"></h3>
     
 <!-- fim da div meio -->
   </div> 
